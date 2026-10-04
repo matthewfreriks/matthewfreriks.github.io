@@ -13,7 +13,7 @@ layout: default
 
 <main>
   <article class="post-body">
-    {{ content }}
+    {{ content | replace: 'src="images/', 'src="/images/' }}
   </article>
   <p class="back-link"><a href="/blog/">Back to all posts</a></p>
 </main>

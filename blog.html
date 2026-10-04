@@ -13,16 +13,32 @@ description: Writing from Basic to Brilliant by Matthew Freriks, on science, eng
 </header>
 
 <main>
+  {% assign building = site.posts | where: "status", "building" %}
+  {% if building.size > 0 %}
   <section>
-    <!-- Lists every file in _posts automatically, newest first -->
+    <h2>Being built</h2>
     <ol class="post-list">
-      {% for post in site.posts %}
+      {% for post in building %}
       <li>
-        <p class="post-date">{{ post.date | date: "%-d %B %Y" }}</p>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="post-date">Started {{ post.date | date: "%-d %B %Y" }}</p>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
       </li>
       {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <section>
+    <h2>Posts</h2>
+    <ol class="post-list">
+      {% for post in site.posts %}{% unless post.status == "building" %}
+      <li>
+        <p class="post-date">{{ post.date | date: "%-d %B %Y" }}</p>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
+      </li>
+      {% endunless %}{% endfor %}
     </ol>
   </section>
 </main>
