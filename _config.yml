@@ -2,7 +2,7 @@
 # restart `jekyll serve`, because Jekyll only reads it at startup.
 title: Matthew Freriks
 description: Biomedical engineering and biotechnology student at Swinburne University of Technology, with five years of experience working in Victorian hospitals.
-url: https://www.matthewfreriks.com
+url: https://matthewfreriks.com
 timezone: Australia/Melbourne
 
 # Blog post addresses look like /blog/2024/socaity/
