@@ -388,3 +388,11 @@ footer p { margin: 0 0 0.5rem; }
 /* ---------- 404 page ---------- */
 .lost-links { padding-left: 1.2rem; }
 .lost-links li { margin-bottom: 0.4rem; font-size: 1.1rem; }
+
+/* ---------- Basic to Brilliant logo on the blog page ---------- */
+.blog-brand { display: flex; align-items: center; gap: 1.5rem; }
+.blog-brand img { width: 96px; height: 96px; border-radius: 12px; flex-shrink: 0; }
+.post-list h3 { font-size: 1.4rem; margin: 0.2rem 0 0.4rem; }
+.post-list h3 a { color: var(--ink); text-decoration: none; }
+.post-list h3 a:hover { color: var(--violet); text-decoration: underline; }
+@media (max-width: 480px) { .blog-brand { flex-direction: column; align-items: flex-start; gap: 1rem; } }

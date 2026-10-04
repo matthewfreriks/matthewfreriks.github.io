@@ -6,13 +6,17 @@ description: Writing from Basic to Brilliant by Matthew Freriks, on science, eng
 ---
 <header class="page-header">
   {% include nav.html %}
-  <div class="page-header-inner">
-    <h1>Basic to Brilliant</h1>
-    <p>Getting your knowledge from nothing to something.</p>
+  <div class="page-header-inner blog-brand">
+    <img src="/images/basic-to-brilliant.jpg" alt="Basic to Brilliant logo: a plain outlined light bulb becoming a glowing one" width="96" height="96">
+    <div>
+      <h1>Basic to Brilliant</h1>
+      <p>Getting your knowledge from nothing to something.</p>
+    </div>
   </div>
 </header>
 
 <main>
+  <!-- Posts with  status: building  show here while they're in progress -->
   {% assign building = site.posts | where: "status", "building" %}
   {% if building.size > 0 %}
   <section>
@@ -31,6 +35,7 @@ description: Writing from Basic to Brilliant by Matthew Freriks, on science, eng
 
   <section>
     <h2>Posts</h2>
+    <!-- Lists every finished post in _posts automatically, newest first -->
     <ol class="post-list">
       {% for post in site.posts %}{% unless post.status == "building" %}
       <li>
