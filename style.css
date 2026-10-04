@@ -396,3 +396,45 @@ footer p { margin: 0 0 0.5rem; }
 .post-list h3 a { color: var(--ink); text-decoration: none; }
 .post-list h3 a:hover { color: var(--violet); text-decoration: underline; }
 @media (max-width: 480px) { .blog-brand { flex-direction: column; align-items: flex-start; gap: 1rem; } }
+
+/* ---------- Projects ---------- */
+.project h3 a { color: var(--ink); text-decoration: none; }
+.project h3 a:hover { color: var(--violet); text-decoration: underline; }
+
+/* Status label at the top of a project page */
+.project-status-tag {
+  display: inline-block;
+  margin: 0 0 0.75rem !important;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  color: #fff;
+  border: 1.5px solid #8b7fb0;
+}
+.project-status-tag[data-status="progress"] { background: var(--safranin); border-color: var(--safranin); }
+.project-status-tag[data-status="done"] { background: var(--violet); border-color: var(--violet); }
+
+/* Quick facts box on project pages */
+.project-facts {
+  margin-top: 2.5rem;
+  padding: 1rem 1.25rem !important;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--violet);
+  border-radius: 8px;
+  background: #fff;
+}
+.project-facts p { margin: 0 0 0.5rem; }
+.project-facts p:last-child { margin-bottom: 0; }
+.project-links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.pill-light {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border: 1.5px solid var(--violet);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.pill-light:hover { background: var(--violet); color: #fff; }
+.project-facts + .post-body { padding-top: 1.5rem; }

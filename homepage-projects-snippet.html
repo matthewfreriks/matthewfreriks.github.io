@@ -1,0 +1,15 @@
+    <!-- ===== PROJECTS =====
+         Shows projects with  featured: true  from the _projects folder, in "order".
+         Edit the projects themselves in _projects, not here. -->
+    <section id="projects">
+      <h2>Projects</h2>
+      {% assign featured = site.projects | where: "featured", true | sort: "order" %}
+      {% for p in featured %}
+      <article class="project" data-status="{{ p.status }}">
+        <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+        <p class="status">{% include status-label.html status=p.status %}{% if p.timeframe %}, {{ p.timeframe }}{% endif %}</p>
+        <p>{{ p.summary }}</p>
+      </article>
+      {% endfor %}
+      <p><a href="/projects/">See all projects</a></p>
+    </section>

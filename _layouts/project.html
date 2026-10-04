@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<!-- Layout for a single project page -->
+<header class="page-header">
+  {% include nav.html %}
+  <div class="page-header-inner">
+    <p class="project-status-tag" data-status="{{ page.status }}">{% include status-label.html status=page.status %}{% if page.timeframe %}, {{ page.timeframe }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+  </div>
+</header>
+
+<main>
+  <!-- Quick facts box: only shows the parts a project has filled in -->
+  {% if page.skills or page.links %}
+  <section class="project-facts">
+    {% if page.skills %}
+    <p><strong>Skills and tools:</strong> {{ page.skills | join: ", " }}</p>
+    {% endif %}
+    {% if page.links %}
+    <p class="project-links">
+      {% for link in page.links %}<a class="pill-light" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+    </p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <article class="post-body">
+    {{ content | replace: 'src="images/', 'src="/images/' }}
+  </article>
+
+  <!-- Blog posts that set  project: this-project-file-name  in their properties appear here -->
+  {% assign slug = page.slug | default: page.name | remove: ".md" %}
+  {% assign updates = site.posts | where: "project", slug %}
+  {% if updates.size > 0 %}
+  <section>
+    <h2>Build log</h2>
+    <ol class="post-list">
+      {% for post in updates %}
+      <li>
+        <p class="post-date">{{ post.date | date: "%-d %B %Y" }}</p>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <p class="back-link"><a href="/projects/">Back to all projects</a></p>
+</main>

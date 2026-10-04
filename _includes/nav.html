@@ -2,6 +2,7 @@
      aria-current underlines the page you're on. -->
 <nav class="site-nav" aria-label="Site">
   <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+  <a href="/projects/" {% if page.url contains "/projects/" %}aria-current="page"{% endif %}>Projects</a>
   <a href="/lab/" {% if page.url == "/lab/" %}aria-current="page"{% endif %}>Lab work &amp; skills</a>
   <a href="/blog/" {% if page.url contains "/blog/" %}aria-current="page"{% endif %}>Blog</a>
 </nav>

@@ -1,0 +1,33 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+description: Engineering, research and science communication projects by Matthew Freriks.
+---
+<header class="page-header">
+  {% include nav.html %}
+  <div class="page-header-inner">
+    <h1>Projects</h1>
+    <p>What I'm building, researching and planning, and what I've learned along the way.</p>
+  </div>
+</header>
+
+<main>
+  {% assign all = site.projects | sort: "order" %}
+  {% assign groups = "progress,planned,done" | split: "," %}
+  {% for group in groups %}
+    {% assign items = all | where: "status", group %}
+    {% if items.size > 0 %}
+    <section>
+      <h2>{% include status-label.html status=group %}</h2>
+      {% for p in items %}
+      <article class="project" data-status="{{ p.status }}">
+        <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+        {% if p.timeframe %}<p class="status">{{ p.timeframe }}</p>{% endif %}
+        <p>{{ p.summary }}</p>
+      </article>
+      {% endfor %}
+    </section>
+    {% endif %}
+  {% endfor %}
+</main>

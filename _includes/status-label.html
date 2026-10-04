@@ -1,0 +1,1 @@
+{% comment %} Turns a project's status into readable text. Used on project pages and lists. {% endcomment %}{% case include.status %}{% when "done" %}Complete{% when "progress" %}In progress{% else %}Planned{% endcase %}

@@ -8,6 +8,20 @@ timezone: Australia/Melbourne
 # Blog post addresses look like /blog/2024/socaity/
 permalink: /blog/:year/:title/
 
+# Projects: each file in _projects becomes a page at /projects/file-name/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Every project page uses the project layout automatically
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
 # Files Jekyll should not copy into the built site
 exclude:
   - README.md
