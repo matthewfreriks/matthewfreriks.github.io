@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Jekyll: serve with drafts",
+      "type": "shell",
+      "command": "jekyll serve --drafts --livereload",
+      "isBackground": true,
+      "problemMatcher": [],
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Open Obsidian vault",
+      "type": "shell",
+      "command": "Start-Process 'obsidian://open?vault=matthewfreriks.github.io'",
+      "problemMatcher": [],
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "Open local site in browser",
+      "type": "shell",
+      "command": "Start-Sleep -Seconds 10; Start-Process 'http://127.0.0.1:4000'",
+      "problemMatcher": [],
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": { "reveal": "silent" }
+    }
+  ]
+}

@@ -384,3 +384,7 @@ footer p { margin: 0 0 0.5rem; }
   font-style: italic;
 }
 .back-link { margin-top: 3rem; }
+
+/* ---------- 404 page ---------- */
+.lost-links { padding-left: 1.2rem; }
+.lost-links li { margin-bottom: 0.4rem; font-size: 1.1rem; }
