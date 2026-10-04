@@ -1,0 +1,233 @@
+/* =========================================================
+   Matthew Freriks portfolio styles
+   Colours are taken from the Gram stain photo:
+   crystal violet, safranin pink, and the white of a glass slide.
+   Change a colour here and it updates everywhere.
+   ========================================================= */
+:root {
+  --ink: #1e1630;        /* deep violet-black: hero background, headings */
+  --violet: #5b3b8c;     /* crystal violet: links, accents */
+  --safranin: #b8386e;   /* safranin pink: "in progress" marker, used sparingly */
+  --glass: #f6f5fa;      /* cool white: page background */
+  --text: #2b2638;       /* body text */
+  --muted: #5e5870;      /* dates and secondary text */
+  --line: #dcd8e6;       /* borders and the timeline line */
+
+  --heading-font: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body-font: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--glass);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: 1.0625rem;   /* 17px */
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--violet); text-underline-offset: 3px; }
+a:hover { color: var(--safranin); }
+
+/* Visible outline for keyboard users */
+a:focus-visible {
+  outline: 3px solid var(--safranin);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--ink);
+  color: #eeeaf6;
+  padding: 4rem 1.5rem 4.5rem;
+}
+
+.hero-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.pitch {
+  font-size: 1.25rem;
+  max-width: 32ch;
+  margin: 1.25rem 0 2rem;
+  color: #d9d3e8;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.hero-links a { color: #fff; font-weight: 700; }
+.hero-links a:hover { color: #f2b6cf; }
+
+.button {
+  background: var(--safranin);
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.hero-links .button:hover { background: #cf4a83; color: #fff; }
+
+/* The microscope image: a circle with a dark ring, like looking down an eyepiece */
+.field { margin: 0; justify-self: center; max-width: 420px; width: 100%; }
+
+.field img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px #120c1e,
+    0 0 0 11px #3a2f52;
+}
+
+.field figcaption {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #b3abc6;
+  text-align: center;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+main section { padding-top: 3.5rem; }
+
+main h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+main h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+main p { margin: 0 0 1rem; max-width: 68ch; }
+
+/* ---------- Projects ---------- */
+.project {
+  position: relative;
+  padding: 0 0 1.75rem 1.75rem;
+}
+
+/* The coloured dot before each project shows its status */
+.project::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+.project[data-status="done"]::before { background: var(--violet); }
+.project[data-status="progress"]::before { background: var(--safranin); }
+.project[data-status="planned"]::before { border: 2px solid var(--violet); }
+
+.project .status {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.2rem 0 0.5rem;
+}
+
+/* ---------- Experience timeline ---------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+  border-left: 2px solid var(--line);
+}
+
+.timeline > li { position: relative; padding-bottom: 2rem; }
+
+.timeline > li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.75rem - 7px);
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--violet);
+  border: 2px solid var(--glass);
+}
+
+.role { margin-top: 1rem; }
+
+.role-title {
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.dates {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.role ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+.role li { margin-bottom: 0.3rem; }
+
+/* ---------- Simple two-line lists (community, skills) ---------- */
+.plain-list { margin: 0; }
+.plain-list dt { font-weight: 700; margin-top: 1rem; }
+.plain-list dt:first-child { margin-top: 0; }
+.plain-list dd { margin: 0.1rem 0 0; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--line);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+footer p { margin: 0 0 0.5rem; }
+.small { font-size: 0.85rem; color: var(--muted); }
+
+/* ---------- Phones and narrow screens ---------- */
+@media (max-width: 760px) {
+  .hero { padding: 3rem 1.25rem; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .field { max-width: 300px; }
+}
+
+/* Respect people who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

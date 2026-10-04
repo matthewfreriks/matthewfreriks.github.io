@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew Freriks | Biomedical Engineering &amp; Biotechnology</title>
+  <!-- This description is what Google and LinkedIn show under your link -->
+  <meta name="description" content="Biomedical engineering and biotechnology student at Swinburne University of Technology, with five years of experience working in Victorian hospitals.">
 
+  <!-- Fonts from Google Fonts: Bricolage Grotesque for headings, Atkinson Hyperlegible for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HERO: name, pitch and the microscope image ===== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Matthew Freriks</h1>
+        <p class="pitch">Biomedical engineering and biotechnology student at Swinburne, with five years working inside Victorian hospitals.</p>
+        <nav class="hero-links" aria-label="Contact links">
+          <a class="button" href="mailto:freriksmj@gmail.com">Email me</a>
+          <a href="https://www.linkedin.com/in/matthewfreriks/">LinkedIn</a>
+          <a href="https://github.com/matthewfreriks">GitHub</a>
+          <!-- When you have a PDF of your CV, upload it to this repository and uncomment this line:
+          <a href="Matthew_Freriks_CV.pdf">Download CV</a> -->
+        </nav>
+      </div>
+
+      <figure class="field">
+        <img src="field-of-view.jpg" alt="Purple rod-shaped bacteria seen through a microscope eyepiece" width="900" height="900">
+        <figcaption><i>Bacillus cereus</i>, Gram stain, photographed through a lab microscope eyepiece</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm completing a Biomedical Engineering and Biotechnology (Honours) degree at Swinburne University of Technology, graduating in 2027.</p>
+      <p>Alongside my studies I've worked in hospitals since 2021, from COVID-19 testing and vaccination clinics to Emergency Department ward clerk, infection prevention administration, and a ward clerk role at Epworth HealthCare. Working across public and private hospitals has shown me how differently health systems can be designed, and how much those design choices affect the people using them every day.</p>
+      <p>Along the way I've built my own tools to fix problems I saw on the job. I'm interested in clinical engineering, health technology and medical devices, especially where good design meets real clinical workflows.</p>
+    </section>
+
+    <!-- ===== EXPERIENCE: a timeline, newest first ===== -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <ol class="timeline">
+        <li>
+          <h3>Epworth HealthCare, Richmond</h3>
+          <div class="role">
+            <p class="role-title">Ward Clerk <span class="dates">Jan 2026 to Mar 2026</span></p>
+            <ul>
+              <li>Conducted patient experience surveys, checking in on patients' preferences, comfort and wellbeing.</li>
+              <li>Booked patient ambulance transport and maintained stock of medical record stationery.</li>
+              <li>Adapted quickly to a private hospital's centralised systems, including iPM.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <h3>West Gippsland Healthcare Group, Warragul</h3>
+
+          <div class="role">
+            <p class="role-title">Infection Prevention &amp; Control Administrative Support <span class="dates">Sept 2024 to present</span></p>
+            <ul>
+              <li>Streamlined vaccination record updates in the Australian Immunisation Register, reducing data entry errors.</li>
+              <li>Developed Excel report forms to improve staff vaccination compliance tracking.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <p class="role-title">Emergency Department Ward Clerk <span class="dates">June 2023 to present</span></p>
+            <ul>
+              <li>Admit, discharge and transfer patients using iPM and the Electronic Medical Record.</li>
+              <li>Created Excel tools that cut the time needed to gather patient data.</li>
+              <li>Liaise with triage nurses to help prioritise care and keep the waiting room calm.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <p class="role-title">Vaccination Clinic Ward Clerk <span class="dates">June 2021 to Dec 2022</span></p>
+            <ul>
+              <li>Managed queues of up to 500 patients a day, reducing wait times by 25%.</li>
+              <li>Taught myself the back end of the COVID-19 Vaccination Management System to build capacity and resource planning reports.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <p class="role-title">COVID-19 Testing Clinic Assistant and Screening <span class="dates">Jan 2021 to June 2022</span></p>
+            <ul>
+              <li>Processed over 1,000 patients through testing, including swabbing under Registered Nurse supervision.</li>
+              <li>Ran health screening for all hospital visitors, contractors and staff.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== PROJECTS =====
+         Each project is an <article class="project">.
+         Change data-status to "done", "progress" or "planned" to change its colour marker. -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project" data-status="progress">
+        <h3>Honours thesis</h3>
+        <p class="status">In progress, due 2027</p>
+        <!-- Replace this with your thesis topic and a short plain-English summary -->
+        <p>A summary of my research question and approach will be added here.</p>
+      </article>
+
+      <article class="project" data-status="progress">
+        <h3>Image processing and automation</h3>
+        <p class="status">Write-up coming soon</p>
+        <!-- Describe the project behind this skill: the problem, what you built, and the result -->
+        <p>Details of my image processing work will be added here.</p>
+      </article>
+
+      <article class="project" data-status="planned">
+        <h3>Emergency department patient flow simulator</h3>
+        <p class="status">Planned for summer</p>
+        <p>A Python model of patient arrivals, triage and bed flow, built on what I've seen working as an ED ward clerk.</p>
+      </article>
+
+      <article class="project" data-status="planned">
+        <h3>Low-cost biosignal sensor</h3>
+        <p class="status">Planned for summer</p>
+        <p>An ECG or EMG sensor built with a microcontroller, with signal filtering and heartbeat detection in Python.</p>
+      </article>
+    </section>
+
+    <!-- ===== LEADERSHIP & COMMUNITY ===== -->
+    <section id="community">
+      <h2>Leadership and community</h2>
+      <dl class="plain-list">
+        <dt>Secretary, Swinburne Engineering Student Society</dt>
+        <dd>Current</dd>
+        <dt>Basketball referee, Warragul and District Amateur Basketball Association</dt>
+        <dd>2014 to present</dd>
+        <dt>Basketball coach, under-19s</dt>
+        <dd>2023</dd>
+        <dt>Basketball coach, under-10s</dt>
+        <dd>2018 to 2019</dd>
+      </dl>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="plain-list">
+        <dt>Programming</dt>
+        <dd>Python, R, MATLAB, C, C#, Ruby, LabVIEW, VBA</dd>
+        <dt>Healthcare systems</dt>
+        <dd>iPM, Electronic Medical Record, Australian Immunisation Register</dd>
+        <dt>Tools</dt>
+        <dd>Excel, Git and GitHub, HTML and CSS, Adobe Suite</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER / CONTACT ===== -->
+  <footer>
+    <p>Want to talk about a role or project? Email me at <a href="mailto:freriksmj@gmail.com">freriksmj@gmail.com</a>.</p>
+    <p class="small">&copy; 2026 Matthew Freriks</p>
+  </footer>
+
+</body>
+</html>
