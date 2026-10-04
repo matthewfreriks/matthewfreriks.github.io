@@ -7,10 +7,11 @@
   <!-- This description is what Google and LinkedIn show under your link -->
   <meta name="description" content="Biomedical engineering and biotechnology student at Swinburne University of Technology, with five years of experience working in Victorian hospitals.">
 
-  <!-- Fonts from Google Fonts: Bricolage Grotesque for headings, Atkinson Hyperlegible for body text -->
+  <!-- Fonts from Google Fonts: IBM Plex Serif for headings, IBM Plex Sans for body text.
+       To try a different pair, see the font options at the top of style.css -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,11 +19,17 @@
 
   <!-- ===== HERO: name, pitch and the microscope image ===== -->
   <header class="hero">
+    <!-- Site navigation: add a link here for every new page -->
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="lab.html">Lab work &amp; skills</a>
+    </nav>
     <div class="hero-inner">
       <div class="hero-text">
         <h1>Matthew Freriks</h1>
         <p class="pitch">Biomedical engineering and biotechnology student at Swinburne, with five years working inside Victorian hospitals.</p>
         <nav class="hero-links" aria-label="Contact links">
+          <!-- Swap both email addresses on this page to matthew@matthewfreriks.com once Email Routing is set up -->
           <a class="button" href="mailto:freriksmj@gmail.com">Email me</a>
           <a href="https://www.linkedin.com/in/matthewfreriks/">LinkedIn</a>
           <a href="https://github.com/matthewfreriks">GitHub</a>
@@ -46,6 +53,7 @@
       <p>I'm completing a Biomedical Engineering and Biotechnology (Honours) degree at Swinburne University of Technology, graduating in 2027.</p>
       <p>Alongside my studies I've worked in hospitals since 2021, from COVID-19 testing and vaccination clinics to Emergency Department ward clerk, infection prevention administration, and a ward clerk role at Epworth HealthCare. Working across public and private hospitals has shown me how differently health systems can be designed, and how much those design choices affect the people using them every day.</p>
       <p>Along the way I've built my own tools to fix problems I saw on the job. I'm interested in clinical engineering, health technology and medical devices, especially where good design meets real clinical workflows.</p>
+      <p>Outside engineering, I'm studying philosophy (currently logic) and Latin, which turns out to be very useful for reading scientific names.</p>
     </section>
 
     <!-- ===== EXPERIENCE: a timeline, newest first ===== -->
@@ -104,33 +112,6 @@
       </ol>
     </section>
 
-    <!-- ===== LAB WORK GALLERY ===== -->
-    <section id="lab">
-      <h2>In the lab</h2>
-      <div class="gallery">
-        <figure>
-          <img src="images/lab-circuit.jpg" alt="Breadboard circuit wired to a National Instruments myDAQ" loading="lazy">
-          <figcaption>Circuit prototyping with a National Instruments myDAQ</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lab-gram-positive.jpg" alt="Purple-stained bacteria under a microscope" loading="lazy">
-          <figcaption>Gram stain showing Gram-positive (purple) cells</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lab-gram-negative.jpg" alt="Pink-stained bacteria under a microscope" loading="lazy">
-          <figcaption>Gram stain showing Gram-negative (pink) cells</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lab-klebsiella-plate.jpg" alt="Agar plate labelled Klebsiella pneumoniae with white colonies" loading="lazy">
-          <figcaption><i>Klebsiella pneumoniae</i> colonies on agar</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lab-streak-plate.jpg" alt="Gloved hand holding a red agar streak plate" loading="lazy">
-          <figcaption>Streak plate for isolating bacterial colonies</figcaption>
-        </figure>
-      </div>
-    </section>
-
     <!-- ===== PROJECTS =====
          Each project is an <article class="project">.
          Change data-status to "done", "progress" or "planned" to change its colour marker. -->
@@ -144,25 +125,18 @@
         <p>A summary of my research question and approach will be added here.</p>
       </article>
 
-      <article class="project" data-status="progress">
-        <h3>Image processing and automation</h3>
-        <p class="status">Write-up coming soon</p>
-        <!-- Describe the project behind this skill: the problem, what you built, and the result -->
-        <p>Details of my image processing work will be added here.</p>
+      <article class="project" data-status="planned">
+        <h3>Counting bacteria with image processing</h3>
+        <p class="status">Planned for summer</p>
+        <p>Python code that finds, counts and measures the rod-shaped bacteria in the Gram stain image at the top of this page, plus an explainer video on how it works.</p>
+        <!-- When ready, add links like these:
+        <p><a href="https://github.com/matthewfreriks/gram-stain-counter">Code</a> | <a href="https://youtu.be/VIDEO_ID">Video</a></p> -->
       </article>
 
       <article class="project" data-status="planned">
         <h3>Emergency department patient flow simulator</h3>
         <p class="status">Planned for summer</p>
         <p>A Python model of patient arrivals, triage and bed flow, built on what I've seen working as an ED ward clerk.</p>
-      </article>
-
-        <article class="project" data-status="planned">
-        <h3>Counting bacteria with image processing</h3>
-        <p class="status">Planned for summer</p>
-        <p>Python code that finds, counts and measures the rod-shaped bacteria in the Gram stain image at the top of this page, plus an explainer video on how it works.</p>
-        <!-- When ready, add links like these:
-        <p><a href="https://github.com/matthewfreriks/gram-stain-counter">Code</a> | <a href="https://youtu.be/VIDEO_ID">Video</a></p> -->
       </article>
 
       <article class="project" data-status="planned">
@@ -172,15 +146,14 @@
       </article>
     </section>
 
-
-        <!-- ===== SCIENCE COMMUNICATION ===== -->
+    <!-- ===== SCIENCE COMMUNICATION ===== -->
     <section id="scicomm">
       <h2>Science communication</h2>
-      <p>Through Basic to Brilliant, I explain science and engineering for non-experts, with a focus on how computers see and analyse biological images</p>
+      <p>Through Basic to Brilliant, I explain science and engineering for people without a technical background, through video, podcast and writing.</p>
 
       <!-- To embed a different video, replace the ID after /embed/ -->
       <div class="video">
-        <iframe src="images/https://www.youtube-nocookie.com/embed/zTt8rVyxvaU"
+        <iframe src="https://www.youtube-nocookie.com/embed/zTt8rVyxvaU"
                 title="Basic to Brilliant video"
                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen loading="lazy"></iframe>
@@ -211,24 +184,19 @@
       </dl>
     </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <dl class="plain-list">
-        <dt>Programming</dt>
-        <dd>Python, R, MATLAB, C, C#, Ruby, LabVIEW, VBA</dd>
-        <dt>Healthcare systems</dt>
-        <dd>iPM, Electronic Medical Record, Australian Immunisation Register</dd>
-        <dt>Tools</dt>
-        <dd>Excel, Git and GitHub, HTML and CSS, Adobe Suite</dd>
-      </dl>
+    <!-- ===== LINK TO THE LAB & SKILLS PAGE ===== -->
+    <section>
+      <a class="next-page" href="lab.html">
+        <span class="next-label">Lab work and skills</span>
+        <span class="next-desc">Photos from the lab, plus my programming, healthcare systems and lab skills</span>
+      </a>
     </section>
 
   </main>
 
   <!-- ===== FOOTER / CONTACT ===== -->
   <footer>
-    <p>Want to talk about a role or project? Email me at <a href="mailto:matthew@matthewfreriks.com">matthew@matthewfreriks.com</a>.</p>
+    <p>Want to talk about a role or project? Email me at <a href="mailto:freriksmj@gmail.com">freriksmj@gmail.com</a>.</p>
     <p class="small">&copy; 2026 Matthew Freriks</p>
   </footer>
 

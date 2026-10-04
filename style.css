@@ -13,8 +13,14 @@
   --muted: #5e5870;      /* dates and secondary text */
   --line: #dcd8e6;       /* borders and the timeline line */
 
-  --heading-font: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --body-font: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  /* FONTS
+     Current pair: IBM Plex Serif (headings) + IBM Plex Sans (body).
+     To switch, change the two lines below AND the Google Fonts <link> in every .html page.
+       Option B: "Fraunces" + "Source Sans 3"   (warmer, more bookish)
+       Option C: "Space Grotesk" + "Inter"       (modern and technical)
+     Get the <link> line for any font at fonts.google.com */
+  --heading-font: "IBM Plex Serif", Georgia, serif;
+  --body-font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -53,7 +59,7 @@ h1, h2, h3 {
 .hero {
   background: var(--ink);
   color: #eeeaf6;
-  padding: 4rem 1.5rem 4.5rem;
+  padding: 1.5rem 1.5rem 4.5rem;
 }
 
 .hero-inner {
@@ -68,7 +74,7 @@ h1, h2, h3 {
 .hero h1 {
   color: #fff;
   font-size: clamp(2.6rem, 6vw, 4.5rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
@@ -86,7 +92,7 @@ h1, h2, h3 {
   gap: 1.25rem;
 }
 
-.hero-links a { color: #fff; font-weight: 700; }
+.hero-links a { color: #fff; font-weight: 600; }
 .hero-links a:hover { color: #f2b6cf; }
 
 .button {
@@ -128,7 +134,7 @@ main section { padding-top: 3.5rem; }
 
 main h2 {
   font-size: 1.9rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1.25rem;
 }
 
@@ -190,7 +196,7 @@ main p { margin: 0 0 1rem; max-width: 68ch; }
 .role { margin-top: 1rem; }
 
 .role-title {
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 0.25rem;
 }
 
@@ -206,9 +212,81 @@ main p { margin: 0 0 1rem; max-width: 68ch; }
 
 /* ---------- Simple two-line lists (community, skills) ---------- */
 .plain-list { margin: 0; }
-.plain-list dt { font-weight: 700; margin-top: 1rem; }
+.plain-list dt { font-weight: 600; margin-top: 1rem; }
 .plain-list dt:first-child { margin-top: 0; }
 .plain-list dd { margin: 0.1rem 0 0; color: var(--muted); }
+
+/* ---------- Site navigation (top of every page) ---------- */
+.site-nav {
+  max-width: 1040px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.site-nav a { color: #d9d3e8; text-decoration: none; font-weight: 600; }
+.site-nav a:hover { color: #fff; }
+.site-nav a[aria-current="page"] { color: #fff; border-bottom: 2px solid var(--safranin); }
+
+/* ---------- Shorter header for inner pages ---------- */
+.page-header {
+  background: var(--ink);
+  color: #d9d3e8;
+  padding: 2rem 1.5rem 3rem;
+}
+.page-header-inner { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+.page-header h1 { color: #fff; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; }
+.page-header p { margin: 0.75rem 0 0; font-size: 1.15rem; }
+
+/* ---------- "Next page" link box on the homepage ---------- */
+.next-page {
+  display: block;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--violet);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  text-decoration: none;
+  color: var(--text);
+}
+.next-page:hover { border-left-color: var(--safranin); }
+.next-label { display: block; font-family: var(--heading-font); font-size: 1.3rem; color: var(--ink); font-weight: 600; }
+.next-desc { display: block; color: var(--muted); margin-top: 0.25rem; }
+
+/* ---------- Skills in bordered boxes ---------- */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.skill-box {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  background: #fff;
+}
+.skill-box h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.skill-box p { margin: 0; color: var(--muted); }
+
+/* ---------- Embedded video ---------- */
+.video {
+  aspect-ratio: 16 / 9;
+  margin: 0.5rem 0 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ink);
+}
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ---------- Lab gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+.gallery figure { margin: 0; }
+.gallery img { border-radius: 6px; aspect-ratio: 1; object-fit: cover; width: 100%; }
+.gallery figcaption { font-size: 0.875rem; color: var(--muted); margin-top: 0.5rem; }
 
 /* ---------- Footer ---------- */
 footer {
@@ -222,7 +300,9 @@ footer p { margin: 0 0 0.5rem; }
 
 /* ---------- Phones and narrow screens ---------- */
 @media (max-width: 760px) {
-  .hero { padding: 3rem 1.25rem; }
+  .hero { padding: 1.5rem 1.25rem 3rem; }
+  .site-nav { justify-content: flex-start; margin-bottom: 2rem; }
+  .page-header-inner { padding: 0; }
   .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .field { max-width: 300px; }
 }
@@ -231,13 +311,3 @@ footer p { margin: 0 0 0.5rem; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
-
-/* ---------- Embedded video ---------- */
-.video {
-  aspect-ratio: 16 / 9;
-  margin: 0.5rem 0 1.5rem;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--ink);
-}
-.video iframe { width: 100%; height: 100%; border: 0; display: block; }
