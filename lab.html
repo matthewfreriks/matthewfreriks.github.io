@@ -1,28 +1,12 @@
 ---
+layout: default
+title: Lab work and skills
+permalink: /lab/
+description: Lab work and technical skills of Matthew Freriks, biomedical engineering and biotechnology student at Swinburne.
 ---
-<!DOCTYPE html>
-<html lang="en-AU">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lab work and skills | Matthew Freriks</title>
-  <meta name="description" content="Lab work and technical skills of Matthew Freriks, biomedical engineering and biotechnology student at Swinburne.">
-
-  <!-- Same fonts as the homepage. If you change fonts, change this line on every page -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
   <!-- ===== SMALL PAGE HEADER (shorter than the homepage hero) ===== -->
-  <header class="page-header">
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html">Home</a>
-      <a href="lab.html" aria-current="page">Lab work &amp; skills</a>
-    </nav>
+  <header class="page-header lab-bg">
+    {% include nav.html %}
     <div class="page-header-inner">
       <h1>Lab work and skills</h1>
       <p>The hands-on side of my degree, from circuits to cultures.</p>
@@ -36,23 +20,23 @@
       <h2>In the lab</h2>
       <div class="gallery">
         <figure>
-          <img src="images/lab-circuit.jpg" alt="Breadboard circuit wired to a National Instruments myDAQ" loading="lazy">
+          <img src="/images/lab-circuit.jpg" alt="Breadboard circuit wired to a National Instruments myDAQ" loading="lazy">
           <figcaption>Circuit prototyping with a National Instruments myDAQ</figcaption>
         </figure>
         <figure>
-          <img src="images/lab-gram-positive.jpg" alt="Purple-stained bacteria under a microscope" loading="lazy">
+          <img src="/images/lab-gram-positive.jpg" alt="Purple-stained bacteria under a microscope" loading="lazy">
           <figcaption>Gram stain showing Gram-positive (purple) cells</figcaption>
         </figure>
         <figure>
-          <img src="images/lab-gram-negative.jpg" alt="Pink-stained bacteria under a microscope" loading="lazy">
+          <img src="/images/lab-gram-negative.jpg" alt="Pink-stained bacteria under a microscope" loading="lazy">
           <figcaption>Gram stain showing Gram-negative (pink) cells</figcaption>
         </figure>
         <figure>
-          <img src="images/lab-klebsiella-plate.jpg" alt="Agar plate labelled Klebsiella pneumoniae with white colonies" loading="lazy">
+          <img src="/images/lab-klebsiella-plate.jpg" alt="Agar plate labelled Klebsiella pneumoniae with white colonies" loading="lazy">
           <figcaption><i>Klebsiella pneumoniae</i> colonies on agar</figcaption>
         </figure>
         <figure>
-          <img src="images/lab-streak-plate.jpg" alt="Gloved hand holding a red agar streak plate" loading="lazy">
+          <img src="/images/lab-streak-plate.jpg" alt="Gloved hand holding a red agar streak plate" loading="lazy">
           <figcaption>Streak plate for isolating bacterial colonies</figcaption>
         </figure>
       </div>
@@ -83,8 +67,3 @@
     </section>
 
   </main>
-
-    {% include footer.html %}
-
-</body>
-</html>

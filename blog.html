@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: Writing from Basic to Brilliant by Matthew Freriks, on science, engineering and technology.
+---
+<header class="page-header">
+  {% include nav.html %}
+  <div class="page-header-inner">
+    <h1>Basic to Brilliant</h1>
+    <p>Getting your knowledge from nothing to something.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <!-- Lists every file in _posts automatically, newest first -->
+    <ol class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <p class="post-date">{{ post.date | date: "%-d %B %Y" }}</p>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+</main>

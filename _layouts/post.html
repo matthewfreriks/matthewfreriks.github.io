@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<!-- Layout for a single blog post -->
+<header class="page-header">
+  {% include nav.html %}
+  <div class="page-header-inner">
+    <p class="post-date">{{ page.date | date: "%-d %B %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+  </div>
+</header>
+
+<main>
+  <article class="post-body">
+    {{ content }}
+  </article>
+  <p class="back-link"><a href="/blog/">Back to all posts</a></p>
+</main>

@@ -1,38 +1,15 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en-AU">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Matthew Freriks | Biomedical Engineering &amp; Biotechnology</title>
-  <!-- This description is what Google and LinkedIn show under your link -->
-  <meta name="description" content="Biomedical engineering and biotechnology student at Swinburne University of Technology, with five years of experience working in Victorian hospitals.">
-
-  <!-- Fonts from Google Fonts: IBM Plex Serif for headings, IBM Plex Sans for body text.
-       To try a different pair, see the font options at the top of style.css -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
   <!-- ===== HERO: name, pitch and the microscope image ===== -->
   <header class="hero">
-    <!-- Site navigation: add a link here for every new page -->
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="lab.html">Lab work &amp; skills</a>
-    </nav>
+    {% include nav.html %}
     <div class="hero-inner">
       <div class="hero-text">
         <h1>Matthew Freriks</h1>
         <p class="pitch">Biomedical engineering and biotechnology student at Swinburne, with five years working inside Victorian hospitals.</p>
         <nav class="hero-links" aria-label="Contact links">
-          <!-- Swap both email addresses on this page to matthew@matthewfreriks.com once Email Routing is set up -->
-          <a class="button" href="mailto:freriksmj@gmail.com">Email me</a>
+          <a class="button" href="mailto:matthew@matthewfreriks.com">Email me</a>
           <a href="https://www.linkedin.com/in/matthewfreriks/">LinkedIn</a>
           <a href="https://github.com/matthewfreriks">GitHub</a>
           <!-- When you have a PDF of your CV, upload it to this repository and uncomment this line:
@@ -41,7 +18,7 @@
       </div>
 
       <figure class="field">
-        <img src="images/field-of-view.jpg" alt="Purple rod-shaped bacteria seen through a microscope eyepiece" width="900" height="900">
+        <img src="/images/field-of-view.jpg" alt="Purple rod-shaped bacteria seen through a microscope eyepiece" width="900" height="900">
         <figcaption><i>Bacillus cereus</i>, Gram stain, photographed through a lab microscope eyepiece</figcaption>
       </figure>
     </div>
@@ -166,7 +143,7 @@
         <dd>Science explainer videos</dd>
         <dt><a href="https://open.spotify.com/show/4taF1kAVUmMDslwFqg0ub9">Podcast</a></dt>
         <dd>Basic to Brilliant on Spotify</dd>
-        <dt><a href="https://freriksmj.wordpress.com/">Blog</a></dt>
+        <dt><a href="/blog/">Blog</a></dt>
         <dd>Written articles</dd>
       </dl>
     </section>
@@ -188,7 +165,7 @@
 
     <!-- ===== LINK TO THE LAB & SKILLS PAGE ===== -->
     <section>
-      <a class="next-page" href="lab.html">
+      <a class="next-page" href="/lab/">
         <span class="next-label">Lab work and skills</span>
         <span class="next-desc">Photos from the lab, plus my programming, healthcare systems and lab skills</span>
       </a>
@@ -197,6 +174,3 @@
   </main>
 
   <!-- ===== FOOTER / CONTACT ===== -->
-    {% include footer.html %}
-</body>
-</html>
