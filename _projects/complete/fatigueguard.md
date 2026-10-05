@@ -75,6 +75,7 @@ Testing showed where the prototype would need to improve for real worksites:
 - **Motion affects heart rate readings.** Physical work introduces noise the filter can't fully remove, so adaptive motion-artefact rejection is needed.
 - **Eye detection struggles in dim light,** dropping from about 95% to 70% of frames. A more robust face-tracking model would help.
 - **Mounting the camera on a helmet** reduced detection reliability, because the camera cable was too short for a good viewing distance.
+- Very large and different places to put the detectors.
 
 We also assessed patents held by existing products, the relevant Australian workplace safety standards, and the business case. The device is classed as workplace safety equipment rather than a medical device, which shortens its regulatory pathway considerably.
 

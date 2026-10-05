@@ -1,11 +1,19 @@
 ---
 title: Medical imaging and image processing in MATLAB
-timeframe: 2025–2026
+timeframe: "2026"
 order: 2
 featured: true
 summary: X-ray attenuation analysis, beam hardening simulation and image filtering, measured and compared quantitatively in MATLAB.
-skills: [MATLAB, Image Processing Toolbox, X-ray physics, image filtering, data analysis]
-tags: [medical-imaging, image-processing, matlab]
+skills:
+  - MATLAB
+  - Image Processing Toolbox
+  - X-ray physics
+  - image filtering
+  - data analysis
+tags:
+  - medical-imaging
+  - image-processing
+  - matlab
 ---
 
 *Coursework from BME40005 Medical Imaging and EEE40017 Machine Vision, Swinburne University of Technology.*
