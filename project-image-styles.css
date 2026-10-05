@@ -1,0 +1,13 @@
+
+/* ---------- Image rows on project pages ---------- */
+.img-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.img-row figure { margin: 0; }
+.img-row img { width: 100%; border-radius: 6px; margin: 0; aspect-ratio: 3 / 4; object-fit: cover; background: var(--ink); }
+.img-row figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+/* Dashboard screenshots are landscape, so don't force them into portrait */
+.img-row img[src*="dashboard"] { aspect-ratio: auto; object-fit: contain; }
