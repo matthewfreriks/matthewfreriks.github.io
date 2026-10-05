@@ -70,7 +70,7 @@ This file lives in `_guides`. Jekyll ignores folders that start with an undersco
 ## 6. Check the live site
 
 1. Wait a minute or two for GitHub to rebuild the site.
-2. Open https://www.matthewfreriks.com/blog/ and check the post.
+2. Open https://matthewfreriks.com/blog/ and check the post.
 3. If something looks old or unstyled, press **Ctrl + F5** to force a full reload.
 
 ---

@@ -12,4 +12,3 @@ status: published
 How do MRI's work?
 
 I am assuming if you have stumbled upon this article you are asking that exact
-![](images/post/723bca7a-cd0d-43d4-9471-246fe8f1b3f1_rw_1920.png)
