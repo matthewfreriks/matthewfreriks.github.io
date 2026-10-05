@@ -1,11 +1,20 @@
 ---
 title: Networked patient monitoring and IoT security
-status: done
 timeframe: Semester 2, 2024
 order: 3
 featured: false
 summary: Simulated patient monitoring devices communicating over MQTT, with a control interface and a security review of the network they ran on.
-skills: [Python, MQTT, Tkinter, IoT, cybersecurity]
+skills:
+  - Python
+  - MQTT
+  - Tkinter
+  - IoT
+  - cybersecurity
+tags:
+  - health-technology
+  - iot
+  - cybersecurity
+  - python
 ---
 
 *Individual project for TNE20003 Internet and Cybersecurity for Engineering Applications, Swinburne University of Technology.*

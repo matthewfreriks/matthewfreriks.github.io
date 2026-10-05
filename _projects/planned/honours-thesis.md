@@ -1,10 +1,11 @@
 ---
 title: Honours thesis
-status: progress
 timeframe: Due 2027
 order: 1
 featured: true
 summary: My final-year honours research project at Swinburne.
+tags:
+  - research
 ---
 
 <!-- Fill in once you're ready to share:

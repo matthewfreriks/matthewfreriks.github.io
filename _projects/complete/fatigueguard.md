@@ -1,18 +1,29 @@
 ---
 title: "FatigueGuard: real-time fatigue detection"
-status: done
 timeframe: Semester 1, 2026
 order: 1
 featured: true
 summary: A low-cost wearable prototype that combines eye tracking, heart rate and head tilt to detect dangerous fatigue in high-risk workers, with a live supervisor dashboard.
-skills: [Python, Raspberry Pi, OpenCV, signal processing, sensor fusion, Flask, embedded systems]
+skills:
+  - Python
+  - Raspberry Pi
+  - OpenCV
+  - signal processing
+  - sensor fusion
+  - Flask
+  - embedded systems
+tags:
+  - health-technology
+  - biosignals
+  - signal-processing
+  - image-processing
+  - embedded-systems
+  - python
 ---
 
 *ENG40011 Engineering Technology Innovation Project, Swinburne University of Technology. Group project with Chenxi Liu, Sahil, Parav Sharma and Max Bruno.*
 
-<!-- Add a sentence on YOUR role here, e.g. "I was responsible for..." (check the
-     report's contribution section or your own notes so it's accurate). -->
-
+I was responsible for what we should be looking for to estimate fatigue with the biosingals like drooping eyes and heart rate with further expansion into skin conduction and eye tracking.
 ## The problem
 
 Fatigue in mining, transport, construction and offshore work causes serious injuries and deaths. Severe fatigue impairs reaction time and decision-making in ways comparable to alcohol. Yet Australian rules mostly govern shift schedules, not a worker's actual state: someone can complete a mandated rest break and still return to site dangerously tired.

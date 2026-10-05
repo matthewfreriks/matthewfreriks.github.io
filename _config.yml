@@ -15,12 +15,27 @@ collections:
     permalink: /projects/:name/
 
 # Every project page uses the project layout automatically
+# Settings applied automatically, based on where a file lives
 defaults:
   - scope:
       path: ""
       type: projects
     values:
       layout: project
+  - scope:
+      path: "_projects/complete"
+    values:
+      status: done
+  - scope:
+      path: "_projects/in-progress"
+    values:
+      status: progress
+  - scope:
+      path: "_projects/planned"
+    values:
+      status: planned
+
+tags: [health-technology, biosignals, signal-processing, image-processing, embedded-systems, python]
 
 # Files Jekyll should not copy into the built site
 exclude:

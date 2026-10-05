@@ -1,11 +1,20 @@
 ---
 title: Telemedicine system in LabVIEW
-status: done
 timeframe: Semester 2, 2024
 order: 4
 featured: false
 summary: A multi-user telemedicine application connecting local doctors with remote specialists, with messaging, voice, video, a temperature sensor and remote device control.
-skills: [LabVIEW, NI myDAQ, networking, state machines, teamwork]
+skills:
+  - LabVIEW
+  - NI myDAQ
+  - networking
+  - state machines
+  - teamwork
+tags:
+  - health-technology
+  - iot
+  - embedded-systems
+  - labview
 ---
 
 *ENG20010 Engineering Technology Design Project, Swinburne University of Technology. Group project with Maryam Zaman, Nguyen Phuc (Ben) Duong and Paul Avice-Demay.*

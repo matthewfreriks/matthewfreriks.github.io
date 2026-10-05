@@ -1,8 +1,11 @@
 ---
 layout: post
-title: "How do MRIs work?"
+title: How do MRIs work?
 subtitle: ""
-tags: [medical-imaging, explainer]
+tags:
+  - medical-imaging
+  - science-communication
+  - explainer
 status: published
 ---
 

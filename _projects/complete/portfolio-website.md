@@ -1,14 +1,22 @@
 ---
 title: This website
-status: done
 timeframe: 2026
 order: 6
 featured: false
 summary: Designed, built and deployed my own portfolio site, with a blog, custom domain and automated publishing.
-skills: [HTML, CSS, Jekyll, Liquid, Git, GitHub Pages, Cloudflare DNS, Obsidian]
+skills:
+  - HTML
+  - CSS
+  - Jekyll
+  - Liquid
+  - Git
+  - GitHub Pages
+  - Cloudflare DNS
+  - Obsidian
 links:
-  - label: Source code
-    url: https://github.com/matthewfreriks/matthewfreriks.github.io
+  - "[Source code](https://github.com/matthewfreriks/matthewfreriks.github.io)"
+tags:
+  - web-development
 ---
 
 ## What I built

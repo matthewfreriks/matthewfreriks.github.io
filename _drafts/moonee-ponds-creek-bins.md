@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "A letter on litter: bins along Moonee Ponds Creek"
-subtitle: "An advocacy letter written after a litter audit at Flemington Bridge"
-tags: [advocacy, environment]
+subtitle: An advocacy letter written after a litter audit at Flemington Bridge
+tags:
+  - advocacy
+  - environment
+  - science-communication
 status: published
 ---
 

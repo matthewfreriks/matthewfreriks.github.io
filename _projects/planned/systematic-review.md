@@ -1,11 +1,16 @@
 ---
 title: Systematic review and meta-analysis
-status: planned
 timeframe: Starting summer 2026–27
 order: 2
 featured: true
 summary: Planning my first systematic review, aiming for publication, documented from question to submission.
-skills: [Research methods, PRISMA 2020, R]
+skills:
+  - Research methods
+  - PRISMA 2020
+  - R
+tags:
+  - research
+  - public-health
 ---
 
 <!-- Update the summary once the topic is chosen.

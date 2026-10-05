@@ -1,17 +1,18 @@
 ---
 title: Counting bacteria with image processing
-status: planned
 timeframe: Summer 2026–27
 order: 3
 featured: true
 summary: Python code that finds, counts and measures the rod-shaped bacteria in my Gram stain photos, plus an explainer video.
-skills: [Python, OpenCV, scikit-image]
-# When ready, uncomment and fill in:
-# links:
-#   - label: Code on GitHub
-#     url: https://github.com/matthewfreriks/gram-stain-counter
-#   - label: Explainer video
-#     url: https://youtu.be/VIDEO_ID
+skills:
+  - Python
+  - OpenCV
+  - scikit-image
+tags:
+  - image-processing
+  - microbiology
+  - python
+  - science-communication
 ---
 
 ![Gram stain of Bacillus cereus through the microscope eyepiece](/images/field-of-view.jpg)
