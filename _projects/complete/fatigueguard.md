@@ -20,7 +20,6 @@ tags:
   - embedded-systems
   - python
 ---
-
 *ENG40011 Engineering Technology Innovation Project, Swinburne University of Technology. Group project with Chenxi Liu, Sahil, Parav Sharma and Max Bruno.*
 
 I was responsible for what we should be looking for to estimate fatigue with the biosingals like drooping eyes and heart rate with further expansion into skin conduction and eye tracking.

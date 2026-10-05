@@ -9,6 +9,12 @@ skills:
   - Arduino or ESP32
   - Python
   - signal processing
+tags:
+  - biosignals
+  - signal-processing
+  - prosthetics
+  - embedded-systems
+  - python
 ---
 
 Planned.

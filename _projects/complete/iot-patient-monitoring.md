@@ -4,30 +4,72 @@ timeframe: Semester 2, 2024
 order: 3
 featured: false
 summary: Simulated patient monitoring devices communicating over MQTT, with a control interface and a security review of the network they ran on.
-skills:
-  - Python
-  - MQTT
-  - Tkinter
-  - IoT
-  - cybersecurity
-tags:
-  - health-technology
-  - iot
-  - cybersecurity
-  - python
+skills: [Python, MQTT, Tkinter, IoT, cybersecurity]
+tags: [health-technology, iot, cybersecurity, python]
 ---
 
 *Individual project for TNE20003 Internet and Cybersecurity for Engineering Applications, Swinburne University of Technology.*
 
+This is an assessed project, so this page explains the design with short excerpts rather than publishing the full code.
+
 ## What I built
 
-A prototype Internet of Things system, written in Python, running on an existing MQTT messaging server. MQTT is a lightweight publish/subscribe protocol widely used by connected devices. The system had three simulated devices:
+A prototype Internet of Things system, written in Python, running on an existing MQTT messaging server. MQTT is a lightweight publish/subscribe protocol widely used by connected devices: devices publish readings to named topics, and anything interested subscribes to those topics, without the devices needing to know about each other.
+
+The system had three simulated devices:
 
 - **A patient temperature sensor** publishing readings every five seconds.
-- **A heart monitor and IV controller** publishing heart rate and blood pressure, and listening for commands to raise or lower the IV rate.
-- **A desktop control application** (Tkinter) that subscribes to the sensor data, displays incoming messages, and sends IV commands back to the monitor.
+- **A heart monitor and IV controller** publishing heart rate, blood pressure and IV rate, and listening for commands to raise or lower the IV rate.
+- **A desktop control application** (Tkinter) that displays incoming data and sends IV commands back to the monitor.
 
-The control application uses a message queue to pass data safely from the network thread to the interface, so the window stays responsive while messages arrive.
+### Organising the data with topics
+
+Every message has a topic, structured like a file path. Grouping readings under `sensor/` and commands under `actuator/` means the control app can receive every sensor with a single wildcard subscription, and new sensors appear automatically without changing the app.
+
+```text
+<prefix>/sensor/temperature
+<prefix>/sensor/heartrate
+<prefix>/sensor/bloodpressure
+<prefix>/sensor/IVrate
+<prefix>/actuator/commands      <- commands from the control app
+
+Control app subscribes to:  <prefix>/sensor/#
+```
+
+### Controlling the IV rate remotely
+
+The heart monitor subscribes to the command topic and adjusts the IV rate when a command arrives. The adjustment is stored separately from the base rate, so the device always knows where it started.
+
+```python
+def on_message(client, userdata, msg):
+    global iv_adjustment
+    command = msg.payload.decode().strip().lower()
+    if command == "increase":
+        iv_adjustment += 1
+    elif command == "decrease":
+        iv_adjustment -= 1
+
+# In the publishing loop, every five seconds:
+iv_rate = BASE_IV_RATE + iv_adjustment
+client.publish(topic_iv_rate, iv_rate)
+```
+
+### Keeping the interface responsive
+
+The trickiest part was the interface. MQTT receives messages on a background network thread, but Tkinter only allows the window to be changed from the main thread, and updating it from the wrong thread causes crashes. The fix was a thread-safe queue: the network thread only adds messages to the queue, and the window empties it every 100 ms.
+
+```python
+message_queue = queue.Queue()
+
+def on_message(client, userdata, msg):        # network thread
+    message_queue.put(f"Received {msg.payload.decode()} from {msg.topic}\n")
+
+def process_message_queue():                  # main (GUI) thread
+    while not message_queue.empty():
+        text_area.insert(tk.END, message_queue.get())
+        text_area.see(tk.END)
+    root.after(100, process_message_queue)    # check again in 100 ms
+```
 
 ## The security review
 
@@ -43,4 +85,4 @@ For a system carrying patient information, these protections are essential rathe
 ## What I learned
 
 <!-- In your own words: e.g. what publish/subscribe is good for in healthcare devices,
-     or what surprised you about how easily insecure defaults leak data. -->
+     the threading problem with the GUI, or how easily insecure defaults leak data. -->
