@@ -1,6 +1,6 @@
 ---
 title: Honours thesis
-timeframe: Due 2027
+timeframe: Starting 2027
 order: 1
 featured: true
 summary: My final-year honours research project at Swinburne.

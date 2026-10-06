@@ -42,3 +42,5 @@ exclude:
   - README.md
   - .gitignore
   - .obsidian
+
+collections_dir: content
