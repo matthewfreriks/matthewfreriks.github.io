@@ -79,10 +79,10 @@ The second half of the project was a cybersecurity assessment of the messaging s
 - **Unencrypted messages.** MQTT sends data as plain text by default, so anyone on the network could read it. Fix: TLS encryption between devices and the server.
 - **Insider and network access.** Even an internal-only server is exposed to anyone already on the network. Fix: network segmentation, traffic monitoring, and a VPN or zero-trust model for any outside access.
 - **Denial of service.** A client could flood the server with messages until it stopped responding. Fix: rate limiting, quality-of-service settings and monitoring.
+- **Data readable by the server.** Even with TLS, the broker decrypts every message, so anyone with access to it can read patient data. Fix: two layers of encryption. The outer layer carries only what the server needs to route messages and control access, while the patient data inside is encrypted end to end, from the sending device to the authorised recipient, and never readable by the server. Using an authenticated method such as AES-GCM also means any tampering is detected. The trade-offs are that the outer layer still reveals who is communicating and how often, and that every device needs its keys distributed and replaced securely.
 
 For a system carrying patient information, these protections are essential rather than optional.
 
 ## What I learned
-
-<!-- In your own words: e.g. what publish/subscribe is good for in healthcare devices,
-     the threading problem with the GUI, or how easily insecure defaults leak data. -->
+The biggest gap I found, but didn't get to implement, was protecting data on its way from the devices to whatever collects it. MQTT makes data easy to share, which is fine for readings that aren't sensitive or private, especially when the server sits behind a password and VPN. Patient data needs more. Encrypting the connection with TLS protects data in transit, but the server still decrypts and sees every message in plain text.
+A stronger design would use two layers: an outer layer the server can read to route messages and control who receives them, and an inner layer protecting the patient data itself, encrypted on the device and only decrypted by its intended recipient. Even if a message were intercepted or the server compromised, the data would stay unreadable. That layered, end-to-end approach is what I'd build next.

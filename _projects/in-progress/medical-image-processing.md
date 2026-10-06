@@ -118,6 +118,8 @@ The filter has to match the noise. Gaussian noise responds well to smoothing, bu
 
 ## What I learned
 
+Still Wrtiting
+
 <!-- In your own words: e.g. why measuring (PSNR, error bars) beats judging by eye,
      what surprised you about beam hardening, or how this connects to your
      bacteria-counting project. -->

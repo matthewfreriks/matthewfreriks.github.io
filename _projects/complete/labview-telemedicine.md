@@ -37,10 +37,10 @@ A client-server application with:
 
 I built the server that relays communication between clients, and completed the core features: text messaging, temperature sensor integration and servo control. I also supported teammates working on the dashboard, image sharing and voice calls.
 
-<!-- Optional: add a screenshot of the interface, or a still from the demo video
-     (avoid anything showing login details or personal information). -->
+In the final weeks I also took on integrating the team's features, reworking sections that didn't connect so the complete system worked for our presentation.
 
 ## What I learned
 
-<!-- In your own words: e.g. what a state machine made easier, the challenges of
-     sending voice and video over a network in LabVIEW, or splitting work across a team. -->
+**Choosing the right tool.** LabVIEW excels at connecting to hardware and building measurement systems, but the further we pushed it towards networked, Internet of Things features like voice and video, the harder it became. For that kind of system I'd now reach for Python or another general-purpose language. Working at LabVIEW's lower level did have an upside, though: building the connections between clients and the server myself meant I understood exactly how they worked, and I enjoyed that challenge.
+
+**Making sure the pieces fit together.** We split the work into separate features. I explained to the team how each part should work, including the data flow between them and how the base of the program was structured, but explaining wasn't enough: as the presentation approached, several parts didn't connect, and I took responsibility for integrating them, reworking and in some cases rebuilding sections so the full system ran for the demonstration. Next time I'd give each person a skeleton to build into, such as a template subVI with its inputs and outputs already defined, so their work would plug directly into the server. Agreeing on those connections at the start, and testing the whole system together regularly, would have caught the problems much earlier.

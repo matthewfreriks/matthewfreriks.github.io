@@ -15,10 +15,10 @@ tags:
   - smart-cities
   - iot
 ---
-
 *NPS20011 Social Innovation Challenge, Swinburne University of Technology. Team PoleSTARS: Paul Tai, Eric Jose, Tassika Elliot and Matthew Freriks.*
 
-I interviewed councils on their implementation, the pros of the data and the cons and where they thought the improvements could be made and where they think it was nailed. was also part of the poster creation building in adobe illustrator the poster we used to show our ideas and help build the final report for the implementation, where and how we would build these poles.
+## My role
+I interviewed council representatives about their smart pole programs, and built the poster in Adobe Illustrator, working from design ideas and research contributed by my teammates. I also helped write the final report on implementation: where the poles should go and how they would be built.
 
 ## The challenge
 
@@ -38,11 +38,16 @@ We also planned how it would integrate with smart benches, smart bins and bike l
 
 ## Working with stakeholders
 
-We worked with the Boroondara Council team and interviewed a Brisbane City Council member about their experience with smart pole programs, which shaped what we included and how we presented the case.
+Our team worked with the City of Boroondara's council team throughout the project. I interviewed a Brisbane City Council member, about their experience implementing smart poles: the benefits and drawbacks of the data they collect, what they felt they had got right, and where they saw room for improvement. Those conversations shaped what we included, and made our final recommendation more grounded than research alone would have.
 
 ![The Smart Poles A1 poster: a tall street pole down the centre, with panels on sustainability, lighting, security, connectivity, traffic monitoring, charging, environmental monitoring and expected outcomes](/images/projects/smart-poles-poster.jpg)
 
+## Our recommendation
+
+We assessed a specific smart pole vendor in detail, but couldn't find enough real benefit to justify the cost for the Innovation Spine. Our poster set out what smart poles could offer the community, while our final recommendation was more cautious: wait for the technology to mature, or develop a solution in-house that fits the area's actual needs. If the council did go ahead, we also set out how the data collected by cameras and sensors would need to be handled to protect people's privacy.
+
 ## What I learned
 
-<!-- In your own words: e.g. interviewing a council member, balancing public benefit
-     with privacy, or designing a poster that communicates at a glance. -->
+Interviewing a council member taught me how to run a useful interview: come prepared with the questions you need answered, but leave room for the person to go deeper on the parts they know best. Some of the most valuable insights came from those longer explanations rather than my original questions.
+
+I also learned that a good recommendation doesn't have to be "yes". Our poster showed what smart poles could offer, but after assessing a specific vendor, we couldn't see enough real benefit, so we recommended waiting or developing a solution in-house. Separating what a technology *could* do from whether it's worth adopting *now* is a judgement I'll keep using, especially with new health technologies.

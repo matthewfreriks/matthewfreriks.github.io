@@ -20,50 +20,70 @@ description: Lab work and technical skills of Matthew Freriks, biomedical engine
       <h2>In the lab</h2>
       <div class="gallery">
         <figure>
-          <img src="/images/lab-circuit.jpg" alt="Breadboard circuit wired to a National Instruments myDAQ" loading="lazy">
+          <img src="/images/labwork_skills/lab-circuit.jpg" alt="Breadboard circuit wired to a National Instruments myDAQ" loading="lazy">
           <figcaption>Circuit prototyping with a National Instruments myDAQ</figcaption>
         </figure>
         <figure>
-          <img src="/images/lab-gram-positive.jpg" alt="Purple-stained bacteria under a microscope" loading="lazy">
+          <img src="/images/labwork_skills/lab-gram-positive.jpg" alt="Purple-stained bacteria under a microscope" loading="lazy">
           <figcaption>Gram stain showing Gram-positive (purple) cells</figcaption>
         </figure>
         <figure>
-          <img src="/images/lab-gram-negative.jpg" alt="Pink-stained bacteria under a microscope" loading="lazy">
+          <img src="/images/labwork_skills/lab-gram-negative.jpg" alt="Pink-stained bacteria under a microscope" loading="lazy">
           <figcaption>Gram stain showing Gram-negative (pink) cells</figcaption>
         </figure>
         <figure>
-          <img src="/images/lab-klebsiella-plate.jpg" alt="Agar plate labelled Klebsiella pneumoniae with white colonies" loading="lazy">
+          <img src="/images/labwork_skills/lab-klebsiella-plate.jpg" alt="Agar plate labelled Klebsiella pneumoniae with white colonies" loading="lazy">
           <figcaption><i>Klebsiella pneumoniae</i> colonies on agar</figcaption>
         </figure>
         <figure>
-          <img src="/images/lab-streak-plate.jpg" alt="Gloved hand holding a red agar streak plate" loading="lazy">
+          <img src="/images/labwork_skills/lab-streak-plate.jpg" alt="Gloved hand holding a red agar streak plate" loading="lazy">
           <figcaption>Streak plate for isolating bacterial colonies</figcaption>
+        </figure>
+                <figure>
+          <img src="/images/labwork_skills/lab-confocal-composite.jpg" alt="Confocal fluorescence image of cells in red and green" loading="lazy">
+          <figcaption>Confocal fluorescence microscopy, with red and green channels combined</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/labwork_skills/lab-confocal-imagej-roi.jpg" alt="Greyscale projection of the confocal image used for measurement" loading="lazy">
+          <figcaption>Maximum intensity projection, measured in ImageJ</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ===== SKILLS: each group sits in its own bordered box ===== -->
+    <!-- ===== SKILLS =====
+    Built from _data/skills.yml. Each box lists the projects whose
+    tags match the group's tags, so new projects appear automatically. -->
+
+    
     <section id="skills">
       <h2>Skills</h2>
       <div class="skill-grid">
+        {% assign projects = site.projects | sort: "order" %}
+        {% for group in site.data.skills %}
         <div class="skill-box">
-          <h3>Programming</h3>
-          <p>Python, R, MATLAB, C, C#, Ruby, LabVIEW, VBA</p>
+          <h3>{{ group.name }}</h3>
+          <p>{{ group.items }}</p>
+
+          {% assign links = "" %}
+          {% for p in projects %}
+            {% for t in group.tags %}
+              {% if p.tags contains t %}
+                {% capture link %}<a href="{{ p.url }}">{{ p.title | split: ":" | first }}</a>{% endcapture %}
+                {% unless links contains p.url %}
+                  {% if links != "" %}{% assign links = links | append: ", " %}{% endif %}
+                  {% assign links = links | append: link %}
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+
+          {% if links != "" %}
+          <p class="used-in"><span>Used in:</span> {{ links }}</p>
+          {% endif %}
         </div>
-        <div class="skill-box">
-          <h3>Lab techniques</h3>
-          <!-- Check these match what you've done, and add others (e.g. PCR, cell culture) -->
-          <p>Gram staining, light microscopy, streak plating and aseptic technique, circuit prototyping</p>
-        </div>
-        <div class="skill-box">
-          <h3>Healthcare systems</h3>
-          <p>iPM, Electronic Medical Record, Australian Immunisation Register</p>
-        </div>
-        <div class="skill-box">
-          <h3>Tools</h3>
-          <p>Excel, Git and GitHub, HTML and CSS, Adobe Suite</p>
-        </div>
+        {% endfor %}
       </div>
     </section>
+
 
   </main>

@@ -5,24 +5,20 @@ order: 1
 featured: true
 summary: A low-cost wearable prototype that combines eye tracking, heart rate and head tilt to detect dangerous fatigue in high-risk workers, with a live supervisor dashboard.
 skills:
-  - Python
-  - Raspberry Pi
-  - OpenCV
-  - signal processing
-  - sensor fusion
-  - Flask
-  - embedded systems
+  - teamwork
+  - Physiological measurement
+  -  sensor placement and calibration
+  - code review
+  - technical writing
 tags:
   - health-technology
   - biosignals
-  - signal-processing
-  - image-processing
-  - embedded-systems
-  - python
 ---
 *ENG40011 Engineering Technology Innovation Project, Swinburne University of Technology. Group project with Chenxi Liu, Sahil, Parav Sharma and Max Bruno.*
 
-I was responsible for what we should be looking for to estimate fatigue with the biosingals like drooping eyes and heart rate with further expansion into skin conduction and eye tracking.
+## My role
+
+I was the team's biomedical engineer, working alongside software and electrical engineering students. I identified which physiological signals we should measure and what they needed to be calibrated against, advised on practical details such as where the heart rate sensor should sit to give a reliable reading, and reviewed the code to check it measured what we intended. I also wrote the report.
 ## The problem
 
 Fatigue in mining, transport, construction and offshore work causes serious injuries and deaths. Severe fatigue impairs reaction time and decision-making in ways comparable to alcohol. Yet Australian rules mostly govern shift schedules, not a worker's actual state: someone can complete a mandated rest break and still return to site dangerously tired.
@@ -81,6 +77,4 @@ We also assessed patents held by existing products, the relevant Australian work
 
 ## What I learned
 
-<!-- In your own words: e.g. what sensor fusion taught you about false alarms,
-     working with real sensor noise, team coordination across five people,
-     or how regulation shapes a design. A few sentences is plenty. -->
+The biggest lesson was to let people work to their strengths. With less Python experience than my teammates, I let the software and electrical engineers build most of the system, while I focused on what I could contribute best: knowing what the device should measure and why. To guide them well, I needed to understand how they were implementing each part, so I learned to read and check their code even where I didn't write it. That let me give specific, useful feedback, such as on sensor placement, instead of general suggestions.

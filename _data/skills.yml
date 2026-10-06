@@ -1,0 +1,31 @@
+# Skill groups for the Lab work and skills page.
+# "tags" links each group to projects: any project with one of these
+# tags in its properties is listed under "Used in" automatically.
+
+- name: Programming
+  items: Python, MATLAB and Simulink, R, C, C#, LabVIEW, VBA
+  tags: [python, matlab, labview]
+
+- name: Image analysis
+  items: Image filtering, X-ray analysis, ImageJ/Fiji, OpenCV
+  tags: [image-processing, medical-imaging]
+
+- name: Biology lab
+  items: Gram staining, aseptic technique and streak plating, light and confocal fluorescence microscopy, gel electrophoresis, protein assays
+  tags: [microbiology]
+
+- name: Physiological measurement
+  items: 12-lead ECG, skin conductance, nerve conduction and ventilation analysis
+  tags: [biosignals]
+
+- name: Engineering lab
+  items: Circuit prototyping (NI myDAQ), PID control, X-ray radiography
+  tags: [embedded-systems, iot]
+
+- name: Healthcare systems
+  items: iPM, Electronic Medical Record, Australian Immunisation Register
+  tags: [health-technology]
+
+- name: Design and communication
+  items: Adobe Illustrator and Premiere Pro, technical drawing, poster design, Git and GitHub, HTML and CSS
+  tags: [science-communication, humanitarian-engineering, smart-cities, web-development]

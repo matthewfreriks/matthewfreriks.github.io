@@ -438,3 +438,13 @@ footer p { margin: 0 0 0.5rem; }
 }
 .pill-light:hover { background: var(--violet); color: #fff; }
 .project-facts + .post-body { padding-top: 1.5rem; }
+
+
+/* ---------- "Used in" project links in skill boxes ---------- */
+.used-in {
+  margin-top: 0.75rem !important;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.used-in span { font-weight: 600; color: var(--ink); }
