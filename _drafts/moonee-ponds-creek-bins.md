@@ -9,9 +9,6 @@ tags:
 status: published
 ---
 
-<!-- From the 2024 science communication portfolio. Decide whether to publish it.
-     If you do, add a short intro on why you did the audit and whether anything changed,
-     and set the post date to when you wrote the letter. -->
 
 To Whom It May Concern,
 

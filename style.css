@@ -448,3 +448,47 @@ footer p { margin: 0 0 0.5rem; }
   font-size: 0.9rem;
 }
 .used-in span { font-weight: 600; color: var(--ink); }
+
+
+/* ---------- Code blocks on project pages and posts ---------- */
+.post-body pre,
+.post-body .highlight pre {
+  background: #1e1630;
+  color: #eeeaf6;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;              /* long lines scroll instead of breaking the layout */
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+.post-body code {
+  font-family: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+/* Inline code in a sentence */
+.post-body p code, .post-body li code {
+  background: #ece9f3;
+  color: var(--ink);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+/* Syntax colours (Jekyll's built-in highlighter) */
+.highlight .c, .highlight .c1, .highlight .cm { color: #9d93b5; font-style: italic; } /* comments */
+.highlight .k, .highlight .kd, .highlight .kn { color: #f2b6cf; }                     /* keywords */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sa { color: #b8e6c9; }     /* strings */
+.highlight .mi, .highlight .mf { color: #ffd59e; }                                    /* numbers */
+.highlight .nf, .highlight .nb { color: #a8c8ff; }                                    /* functions */
+
+/* ---------- Image rows on project pages ---------- */
+.img-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.img-row figure { margin: 0; }
+.img-row img { width: 100%; border-radius: 6px; margin: 0; aspect-ratio: 3 / 4; object-fit: cover; background: var(--ink); }
+.img-row figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+/* Dashboard screenshots are landscape, so don't force them into portrait */
+.img-row img[src*="dashboard"] { aspect-ratio: auto; object-fit: contain; }

@@ -9,8 +9,6 @@ tags:
 status: published
 ---
 
-<!-- Started on WordPress in October 2024 and brought across as a draft.
-     Fits the image processing theme: an MRI scan is a physics problem turned into an image. -->
 
 How do MRI's work?
 
